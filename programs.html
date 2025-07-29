@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Programs - NGO Name</title>
+  <title>Programs - Lead Wise</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body class="flex flex-col min-h-screen bg-gray-50">
+  <!-- Header & Navigation -->
   <header class="bg-green-700 text-white sticky top-0 z-50 shadow">
     <div class="container mx-auto flex items-center justify-between py-3 px-4">
       <div class="flex items-center space-x-3">
-        <img src="assets/logo.png" alt="NGO Logo" class="h-10 w-10 rounded-full bg-white p-1"/>
+        <img src="assets/South_Sudan_Flag.jpg" alt="Lead wise Logo" class="h-10 w-10 rounded-full bg-white p-1"/>
         <span class="font-bold text-xl tracking-wide">Lead Wise</span>
       </div>
       <nav>
@@ -21,21 +22,21 @@
           <li><a href="index.html" class="hover:text-green-200 transition">Home</a></li>
           <li><a href="about.html" class="hover:text-green-200 transition">About Us</a></li>
           <li class="relative group">
-            <button class="flex items-center gap-1 hover:text-green-200">
-              Project
-              <svg class="w-4 h-4" fill="none" stroke="currentColor"><use href="#chevron-down"></use></svg>
-            </button>
-            <ul class="absolute hidden group-hover:block bg-white text-gray-800 shadow-md mt-2 rounded min-w-[140px]">
-              <li><a href="gallery.html" class="block px-4 py-2 hover:bg-green-100">Gallery</a></li>
-              <li><a href="documents.html" class="block px-4 py-2 hover:bg-green-100">Documents</a></li>
-            </ul>
-          </li>
+  <button class="flex items-center gap-1 hover:text-green-200 project-dropdown-btn">
+    Project
+    <svg class="w-4 h-4" fill="none" stroke="currentColor"><use href="#chevron-down"></use></svg>
+  </button>
+  <ul class="absolute opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 pointer-events-none group-hover:pointer-events-auto bg-green-600 shadow rounded transition-all duration-500">
+  <li><a href="gallery.html" class="inline-block px-4 py-2 hover:bg-green-100">Gallery</a></li>
+  <li><a href="documents.html" class="inline-block px-4 py-2 hover:bg-green-100">Documents</a></li>
+</ul>
+</li>
           <li class="relative group">
             <button class="flex items-center gap-1 hover:text-green-200">
               Programs
               <svg class="w-4 h-4" fill="none" stroke="currentColor"><use href="#chevron-down"></use></svg>
             </button>
-            <ul class="absolute hidden group-hover:block bg-white text-gray-800 shadow-md mt-2 rounded min-w-[180px]">
+            <ul class="absolute opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 pointer-events-none group-hover:pointer-events-auto bg-green-600 shadow rounded transition-all duration-500">
               <li><a href="internship.html" class="block px-4 py-2 hover:bg-green-100">Internship</a></li>
               <li><a href="consultancy.html" class="block px-4 py-2 hover:bg-green-100">Consultancy</a></li>
               <li><a href="training.html" class="block px-4 py-2 hover:bg-green-100">Training</a></li>
@@ -88,7 +89,7 @@
     </div>
   </header>
 
-  <main class="flex-1">
+  <main class="flex-1 min-h-[130vh]">
     <section class="container mx-auto py-10 px-4">
       <h1 class="text-4xl font-bold text-green-700 mb-4">Our Programs</h1>
       <div class="grid md:grid-cols-2 gap-6">
@@ -112,50 +113,50 @@
     </section>
   </main>
  <!-- Footer -->
-  <footer class="bg-green-700 text-white mt-auto">
-    <div class="container mx-auto py-8 px-4 flex flex-col md:flex-row justify-between items-start md:items-center">
-      <div class="mb-6 md:mb-0 flex-1">
-        <div class="flex items-center mb-2">
-          <img src="assets/logo.png" alt="NGO Logo" class="h-8 w-8 rounded-full bg-white p-1"/>
-          <span class="ml-2 font-bold text-lg">Lead Wise</span>
-        </div>
-        <p>Empowering communities for a sustainable future.</p>
+  <footer id="disappearing-footer" class="fixed bottom-0 left-0 w-full bg-green-700/70 text-white text-center py-4 transition-opacity duration-300 z-50">
+  <div class="container mx-auto py-1 px-3 flex flex-col md:flex-row justify-between items-start md:items-center">
+    <div class="mb-4 md:mb-0 flex-1">
+      <div class="flex items-center mb-1">
+        <img src="assets/South_Sudan_Flag.jpg" alt="NGO Logo" class="h-7 w-7 rounded-full bg-white p-1"/>
+        <span class="ml-2 font-bold text-base">Lead Wise</span>
       </div>
-      <div class="mb-6 md:mb-0 flex-1">
-        <h4 class="font-bold mb-2">Quick Links</h4>
-        <ul class="space-y-1">
-          <li><a href="about.html" class="hover:underline">About Us</a></li>
-          <li><a href="projects.html" class="hover:underline">Projects</a></li>
-          <li><a href="programs.html" class="hover:underline">Programs</a></li>
-          <li><a href="contact.html" class="hover:underline">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="mb-6 md:mb-0 flex-1">
-        <h4 class="font-bold mb-2">Featured Projects</h4>
-        <ul class="space-y-1">
-          <li><a href="project1.html" class="hover:underline">Clean Water Initiative</a></li>
-          <li><a href="project2.html" class="hover:underline">School Support Program</a></li>
-          <li><a href="project3.html" class="hover:underline">Health Outreach</a></li>
-        </ul>
-      </div>
-      <div class="flex-1">
-        <!-- <h4 class="font-bold mb-2">Newsletter</h4> -->
-        <!-- <form class="flex flex-col space-y-2"> -->
-          <!-- <input type="email" class="rounded px-3 py-2 text-gray-800" placeholder="Your email address" required> -->
-          <!-- <button type="submit" class="bg-white text-green-700 font-semibold px-3 py-2 rounded hover:bg-green-100">Subscribe</button> -->
-        <!-- </form> -->
-        <div class="flex items-center mt-4 space-x-4">
-          <a href="#" class="hover:text-green-100"><i data-lucide="facebook" class="w-5 h-5"></i></a>
-          <a href="#" class="hover:text-green-100"><i data-lucide="twitter" class="w-5 h-5"></i></a>
-          <a href="#" class="hover:text-green-100"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-          <a href="#" class="hover:text-green-100"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
-        </div>
+      <p class="text-sm">Empowering communities for a sustainable future.</p>
+    </div>
+    <div class="mb-4 md:mb-0 flex-1">
+      <h4 class="font-bold mb-1 text-base">Quick Links</h4>
+      <ul class="space-y-0.5 text-sm">
+        <li><a href="about.html" class="hover:underline">About Us</a></li>
+        <li><a href="projects.html" class="hover:underline">Projects</a></li>
+        <li><a href="programs.html" class="hover:underline">Programs</a></li>
+        <li><a href="contact.html" class="hover:underline">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="mb-1 md:mb-0 flex-1">
+      <h4 class="font-bold mb-1 text-base">Featured Projects</h4>
+      <ul class="space-y-0.5 text-sm">
+        <li><a href="project1.html" class="hover:underline">Clean Water Initiative</a></li>
+        <li><a href="project2.html" class="hover:underline">School Support Program</a></li>
+        <li><a href="project3.html" class="hover:underline">Health Outreach</a></li>
+      </ul>
+    </div>
+    <div class="flex-1">
+      <!-- <h4 class="font-bold mb-1 text-base">Newsletter</h4> -->
+      <!-- <form class="flex flex-col space-y-1"> -->
+        <!-- <input type="email" class="rounded px-2 py-1 text-gray-800 text-sm" placeholder="Your email address" required> -->
+        <!-- <button type="submit" class="bg-white text-green-700 font-semibold px-2 py-1 rounded hover:bg-green-100 text-sm">Subscribe</button> -->
+      <!-- </form> -->
+      <div class="flex items-center mt-2 space-x-3">
+        <a href="#" class="hover:text-green-100"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+        <a href="#" class="hover:text-green-100"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+        <a href="#" class="hover:text-green-100"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+        <a href="#" class="hover:text-green-100"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
       </div>
     </div>
-    <div class="bg-green-900 text-center py-2 text-xs">
-      &copy; 2025 Lead Wise. All rights reserved.
-    </div>
-  </footer>
+  </div>
+  <div class="bg-green-900 text-center py-1 text-xs">
+    &copy; 2025 lead Wise. All rights reserved.
+  </div>
+</footer>
   <script>
     lucide.createIcons();
   </script>

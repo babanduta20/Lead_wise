@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us - NGO Name</title>
+  <title>About Us - Lead Wise</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body class="flex flex-col min-h-screen bg-gray-50">
+  <!-- Header & Navigation -->
   <header class="bg-green-700 text-white sticky top-0 z-50 shadow">
     <div class="container mx-auto flex items-center justify-between py-3 px-4">
       <div class="flex items-center space-x-3">
-        <img src="assets/logo.png" alt="NGO Logo" class="h-10 w-10 rounded-full bg-white p-1"/>
+        <img src="assets/South_Sudan_Flag.jpg" alt="Lead wise Logo" class="h-10 w-10 rounded-full bg-white p-1"/>
         <span class="font-bold text-xl tracking-wide">Lead Wise</span>
       </div>
       <nav>
@@ -21,21 +22,21 @@
           <li><a href="index.html" class="hover:text-green-200 transition">Home</a></li>
           <li><a href="about.html" class="hover:text-green-200 transition">About Us</a></li>
           <li class="relative group">
-            <button class="flex items-center gap-1 hover:text-green-200">
-              Project
-              <svg class="w-4 h-4" fill="none" stroke="currentColor"><use href="#chevron-down"></use></svg>
-            </button>
-            <ul class="absolute hidden group-hover:block bg-white text-gray-800 shadow-md mt-2 rounded min-w-[140px]">
-              <li><a href="gallery.html" class="block px-4 py-2 hover:bg-green-100">Gallery</a></li>
-              <li><a href="documents.html" class="block px-4 py-2 hover:bg-green-100">Documents</a></li>
-            </ul>
-          </li>
+  <button class="flex items-center gap-1 hover:text-green-200 project-dropdown-btn">
+    Project
+    <svg class="w-4 h-4" fill="none" stroke="currentColor"><use href="#chevron-down"></use></svg>
+  </button>
+  <ul class="absolute opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 pointer-events-none group-hover:pointer-events-auto bg-green-600 shadow rounded transition-all duration-500">
+  <li><a href="gallery.html" class="inline-block px-4 py-2 hover:bg-green-100">Gallery</a></li>
+  <li><a href="documents.html" class="inline-block px-4 py-2 hover:bg-green-100">Documents</a></li>
+</ul>
+</li>
           <li class="relative group">
             <button class="flex items-center gap-1 hover:text-green-200">
               Programs
               <svg class="w-4 h-4" fill="none" stroke="currentColor"><use href="#chevron-down"></use></svg>
             </button>
-            <ul class="absolute hidden group-hover:block bg-white text-gray-800 shadow-md mt-2 rounded min-w-[180px]">
+            <ul class="absolute opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 pointer-events-none group-hover:pointer-events-auto bg-green-600 shadow rounded transition-all duration-500">
               <li><a href="internship.html" class="block px-4 py-2 hover:bg-green-100">Internship</a></li>
               <li><a href="consultancy.html" class="block px-4 py-2 hover:bg-green-100">Consultancy</a></li>
               <li><a href="training.html" class="block px-4 py-2 hover:bg-green-100">Training</a></li>
@@ -88,72 +89,221 @@
     </div>
   </header>
 
-  <main class="flex-1">
-    <section class="container mx-auto py-10 px-4">
-      <h1 class="text-4xl font-bold text-green-700 mb-4">About Us</h1>
-      <p class="mb-4 text-lg">NGO Name is dedicated to empowering communities and driving sustainable development through impactful projects and inclusive programs.</p>
+  <main class="flex-1 min-h-[200vh]">
+    <section class="container mx-auto py-32 px-4">
+      <h1 class="text-base font-bold text-green-700 mb-4">About Us</h1>
+      <p class="mb-4 text-lg">Lead Wise is dedicated to empowering communities and driving sustainable development through impactful projects and inclusive programs.</p>
       <div class="grid md:grid-cols-2 gap-8">
         <div>
-          <h2 class="text-2xl font-semibold mb-2">Our Mission</h2>
+          <h2 class="text-base font-semibold mb-2">Our Mission</h2>
           <p>Empower communities through education, healthcare, and innovation.</p>
         </div>
         <div>
-          <h2 class="text-2xl font-semibold mb-2">Our Vision</h2>
+          <h2 class="text-base font-semibold mb-2">Our Vision</h2>
           <p>A world where every individual has the opportunity to thrive.</p>
         </div>
       </div>
-      <div class="mt-8">
-        <h2 class="text-2xl font-semibold mb-2">Our Team</h2>
-        <p>Meet our passionate team of change-makers committed to making a difference.</p>
+      
+    </section>
+    <div class="mt-8">
+        <h1 class="text-base font-semibold mb-2 text-center text-green-700">Our Team</h1>
+        <p class="pl-4">Meet our passionate team of change-makers committed to making a difference.</p>
         <!-- Add team member cards or images as needed -->
       </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Executive Director -->
+                <div class="card hover:shadow-elevated transition-all duration-300">
+                    <div class="text-center">
+                        <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop" alt="Sarah Chen, Executive Director" class="w-24 h-24 rounded-full object-cover mx-auto mb-4" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <h3 class="text-xl font-inter font-semibold text-text-primary mb-1">Sarah Chen</h3>
+                        <p class="text-primary font-semibold mb-2">Executive Director</p>
+                        <p class="text-sm text-text-secondary mb-4">Leading Impact Hub's strategic vision with 15+ years in international development and sustainable change initiatives.</p>
+                        <div class="space-y-2 text-sm">
+                            <a href="mailto:sarah.chen@impacthub.org" class="flex items-center justify-center text-primary hover:text-primary-700 transition-colors">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                                sarah.chen@impacthub.org
+                            </a>
+                            <a href="tel:+1-555-IMPACT-01" class="flex items-center justify-center text-primary hover:text-primary-700 transition-colors">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                </svg>
+                                +1 (555) IMPACT-01
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Program Director -->
+                <div class="card hover:shadow-elevated transition-all duration-300">
+                    <div class="text-center">
+                        <img src="https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1920.jpg" alt="Marcus Johnson, Program Director" class="w-24 h-24 rounded-full object-cover mx-auto mb-4" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <h3 class="text-xl font-inter font-semibold text-text-primary mb-1">Marcus Johnson</h3>
+                        <p class="text-secondary font-semibold mb-2">Program Director</p>
+                        <p class="text-sm text-text-secondary mb-4">Overseeing all field operations and ensuring program effectiveness across our global initiatives and community partnerships.</p>
+                        <div class="space-y-2 text-sm">
+                            <a href="mailto:marcus.johnson@impacthub.org" class="flex items-center justify-center text-secondary hover:text-secondary-800 transition-colors">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                                marcus.johnson@impacthub.org
+                            </a>
+                            <a href="tel:+1-555-IMPACT-02" class="flex items-center justify-center text-secondary hover:text-secondary-800 transition-colors">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                </svg>
+                                +1 (555) IMPACT-02
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Volunteer Coordinator -->
+                <div class="card hover:shadow-elevated transition-all duration-300">
+                    <div class="text-center">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616c9c0d8e4?q=80&w=300&auto=format&fit=crop" alt="Elena Rodriguez, Volunteer Coordinator" class="w-24 h-24 rounded-full object-cover mx-auto mb-4" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <h3 class="text-xl font-inter font-semibold text-text-primary mb-1">Elena Rodriguez</h3>
+                        <p class="text-accent font-semibold mb-2">Volunteer Coordinator</p>
+                        <p class="text-sm text-text-secondary mb-4">Connecting passionate volunteers with meaningful opportunities and providing ongoing support for our volunteer community.</p>
+                        <div class="space-y-2 text-sm">
+                            <a href="mailto:elena.rodriguez@impacthub.org" class="flex items-center justify-center text-accent hover:text-accent-800 transition-colors">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                                elena.rodriguez@impacthub.org
+                            </a>
+                            <a href="tel:+1-555-IMPACT-03" class="flex items-center justify-center text-accent hover:text-accent-800 transition-colors">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                </svg>
+                                +1 (555) IMPACT-03
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Development Manager -->
+                <div class="card hover:shadow-elevated transition-all duration-300">
+                    <div class="text-center">
+                        <img src="https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop" alt="David Kim, Development Manager" class="w-24 h-24 rounded-full object-cover mx-auto mb-4" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <h3 class="text-xl font-inter font-semibold text-text-primary mb-1">David Kim</h3>
+                        <p class="text-primary font-semibold mb-2">Development Manager</p>
+                        <p class="text-sm text-text-secondary mb-4">Building relationships with donors and partners to secure sustainable funding for our impactful programs worldwide.</p>
+                        <div class="space-y-2 text-sm">
+                            <a href="mailto:david.kim@impacthub.org" class="flex items-center justify-center text-primary hover:text-primary-700 transition-colors">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                                david.kim@impacthub.org
+                            </a>
+                            <a href="tel:+1-555-IMPACT-04" class="flex items-center justify-center text-primary hover:text-primary-700 transition-colors">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                </svg>
+                                +1 (555) IMPACT-04
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Communications Director -->
+                <div class="card hover:shadow-elevated transition-all duration-300">
+                    <div class="text-center">
+                        <img src="https://images.pixabay.com/photo/2016/11/29/03/35/girl-1867092_1920.jpg" alt="Priya Patel, Communications Director" class="w-24 h-24 rounded-full object-cover mx-auto mb-4" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <h3 class="text-xl font-inter font-semibold text-text-primary mb-1">Priya Patel</h3>
+                        <p class="text-secondary font-semibold mb-2">Communications Director</p>
+                        <p class="text-sm text-text-secondary mb-4">Sharing our impact stories and managing media relations to amplify our mission and connect with supporters globally.</p>
+                        <div class="space-y-2 text-sm">
+                            <a href="mailto:priya.patel@impacthub.org" class="flex items-center justify-center text-secondary hover:text-secondary-800 transition-colors">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                                priya.patel@impacthub.org
+                            </a>
+                            <a href="tel:+1-555-IMPACT-05" class="flex items-center justify-center text-secondary hover:text-secondary-800 transition-colors">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                </svg>
+                                +1 (555) IMPACT-05
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Operations Manager -->
+                <div class="card hover:shadow-elevated transition-all duration-300">
+                    <div class="text-center">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&auto=format&fit=crop" alt="James Wilson, Operations Manager" class="w-24 h-24 rounded-full object-cover mx-auto mb-4" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <h3 class="text-xl font-inter font-semibold text-text-primary mb-1">James Wilson</h3>
+                        <p class="text-accent font-semibold mb-2">Operations Manager</p>
+                        <p class="text-sm text-text-secondary mb-4">Ensuring efficient operations and logistics coordination to maximize the effectiveness of our programs and resources.</p>
+                        <div class="space-y-2 text-sm">
+                            <a href="mailto:james.wilson@impacthub.org" class="flex items-center justify-center text-accent hover:text-accent-800 transition-colors">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                                james.wilson@impacthub.org
+                            </a>
+                            <a href="tel:+1-555-IMPACT-06" class="flex items-center justify-center text-accent hover:text-accent-800 transition-colors">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                </svg>
+                                +1 (555) IMPACT-06
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
   </main>
  <!-- Footer -->
-  <footer class="bg-green-700 text-white mt-auto">
-    <div class="container mx-auto py-8 px-4 flex flex-col md:flex-row justify-between items-start md:items-center">
-      <div class="mb-6 md:mb-0 flex-1">
-        <div class="flex items-center mb-2">
-          <img src="assets/logo.png" alt="NGO Logo" class="h-8 w-8 rounded-full bg-white p-1"/>
-          <span class="ml-2 font-bold text-lg">Lead Wise</span>
-        </div>
-        <p>Empowering communities for a sustainable future.</p>
+  <footer id="disappearing-footer" class="fixed bottom-0 left-0 w-full bg-green-700/70 text-white text-center py-4 transition-opacity duration-300 z-50">
+  <div class="container mx-auto py-1 px-3 flex flex-col md:flex-row justify-between items-start md:items-center">
+    <div class="mb-4 md:mb-0 flex-1">
+      <div class="flex items-center mb-1">
+        <img src="assets/South_Sudan_Flag.jpg" alt="NGO Logo" class="h-7 w-7 rounded-full bg-white p-1"/>
+        <span class="ml-2 font-bold text-base">Lead Wise</span>
       </div>
-      <div class="mb-6 md:mb-0 flex-1">
-        <h4 class="font-bold mb-2">Quick Links</h4>
-        <ul class="space-y-1">
-          <li><a href="about.html" class="hover:underline">About Us</a></li>
-          <li><a href="projects.html" class="hover:underline">Projects</a></li>
-          <li><a href="programs.html" class="hover:underline">Programs</a></li>
-          <li><a href="contact.html" class="hover:underline">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="mb-6 md:mb-0 flex-1">
-        <h4 class="font-bold mb-2">Featured Projects</h4>
-        <ul class="space-y-1">
-          <li><a href="project1.html" class="hover:underline">Clean Water Initiative</a></li>
-          <li><a href="project2.html" class="hover:underline">School Support Program</a></li>
-          <li><a href="project3.html" class="hover:underline">Health Outreach</a></li>
-        </ul>
-      </div>
-      <div class="flex-1"> 
-        <!-- <h4 class="font-bold mb-2">Newsletter</h4> -->
-        <!-- <form class="flex flex-col space-y-2"> -->
-          <!-- <input type="email" class="rounded px-3 py-2 text-gray-800" placeholder="Your email address" required> -->
-          <!-- <button type="submit" class="bg-white text-green-700 font-semibold px-3 py-2 rounded hover:bg-green-100">Subscribe</button> -->
-        <!-- </form> -->
-        <div class="flex items-center mt-4 space-x-4">
-          <a href="#" class="hover:text-green-100"><i data-lucide="facebook" class="w-5 h-5"></i></a>
-          <a href="#" class="hover:text-green-100"><i data-lucide="twitter" class="w-5 h-5"></i></a>
-          <a href="#" class="hover:text-green-100"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-          <a href="#" class="hover:text-green-100"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
-        </div>
+      <p class="text-sm">Empowering communities for a sustainable future.</p>
+    </div>
+    <div class="mb-4 md:mb-0 flex-1">
+      <h4 class="font-bold mb-1 text-base">Quick Links</h4>
+      <ul class="space-y-0.5 text-sm">
+        <li><a href="about.html" class="hover:underline">About Us</a></li>
+        <li><a href="projects.html" class="hover:underline">Projects</a></li>
+        <li><a href="programs.html" class="hover:underline">Programs</a></li>
+        <li><a href="contact.html" class="hover:underline">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="mb-1 md:mb-0 flex-1">
+      <h4 class="font-bold mb-1 text-base">Featured Projects</h4>
+      <ul class="space-y-0.5 text-sm">
+        <li><a href="project1.html" class="hover:underline">Clean Water Initiative</a></li>
+        <li><a href="project2.html" class="hover:underline">School Support Program</a></li>
+        <li><a href="project3.html" class="hover:underline">Health Outreach</a></li>
+      </ul>
+    </div>
+    <div class="flex-1">
+      <!-- <h4 class="font-bold mb-1 text-base">Newsletter</h4> -->
+      <!-- <form class="flex flex-col space-y-1"> -->
+        <!-- <input type="email" class="rounded px-2 py-1 text-gray-800 text-sm" placeholder="Your email address" required> -->
+        <!-- <button type="submit" class="bg-white text-green-700 font-semibold px-2 py-1 rounded hover:bg-green-100 text-sm">Subscribe</button> -->
+      <!-- </form> -->
+      <div class="flex items-center mt-2 space-x-3">
+        <a href="#" class="hover:text-green-100"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+        <a href="#" class="hover:text-green-100"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+        <a href="#" class="hover:text-green-100"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+        <a href="#" class="hover:text-green-100"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
       </div>
     </div>
-    <div class="bg-green-900 text-center py-2 text-xs">
-      &copy; 2025 Lead Wise. All rights reserved.
-    </div>
-  </footer>
+  </div>
+  <div class="bg-green-900 text-center py-1 text-xs">
+    &copy; 2025 lead Wise. All rights reserved.
+  </div>
+</footer>
   <script>
     lucide.createIcons();
   </script>
