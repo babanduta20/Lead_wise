@@ -9,8 +9,83 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body class="flex flex-col min-h-screen bg-gray-50">
-  <!-- Include the same header as in index.html -->
-  <!-- ... (copy header/nav from index.html) ... -->
+  <header class="bg-green-700 text-white sticky top-0 z-50 shadow">
+    <div class="container mx-auto flex items-center justify-between py-3 px-4">
+      <div class="flex items-center space-x-3">
+        <img src="assets/logo.png" alt="NGO Logo" class="h-10 w-10 rounded-full bg-white p-1"/>
+        <span class="font-bold text-xl tracking-wide">Lead Wise</span>
+      </div>
+      <nav>
+        <ul class="hidden md:flex items-center space-x-6 font-medium">
+          <li><a href="index.html" class="hover:text-green-200 transition">Home</a></li>
+          <li><a href="about.html" class="hover:text-green-200 transition">About Us</a></li>
+          <li class="relative group">
+            <button class="flex items-center gap-1 hover:text-green-200">
+              Project
+              <svg class="w-4 h-4" fill="none" stroke="currentColor"><use href="#chevron-down"></use></svg>
+            </button>
+            <ul class="absolute hidden group-hover:block bg-white text-gray-800 shadow-md mt-2 rounded min-w-[140px]">
+              <li><a href="gallery.html" class="block px-4 py-2 hover:bg-green-100">Gallery</a></li>
+              <li><a href="documents.html" class="block px-4 py-2 hover:bg-green-100">Documents</a></li>
+            </ul>
+          </li>
+          <li class="relative group">
+            <button class="flex items-center gap-1 hover:text-green-200">
+              Programs
+              <svg class="w-4 h-4" fill="none" stroke="currentColor"><use href="#chevron-down"></use></svg>
+            </button>
+            <ul class="absolute hidden group-hover:block bg-white text-gray-800 shadow-md mt-2 rounded min-w-[180px]">
+              <li><a href="internship.html" class="block px-4 py-2 hover:bg-green-100">Internship</a></li>
+              <li><a href="consultancy.html" class="block px-4 py-2 hover:bg-green-100">Consultancy</a></li>
+              <li><a href="training.html" class="block px-4 py-2 hover:bg-green-100">Training</a></li>
+              <li><a href="seminar.html" class="block px-4 py-2 hover:bg-green-100">Supplies</a></li>
+              <li><a href="supplies.html" class="block px-4 py-2 hover:bg-green-100">Supplies</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html" class="hover:text-green-200 transition">Contact Us</a></li>
+          <li>
+            <a href="#" class="bg-white text-green-700 px-4 py-2 rounded-full shadow hover:bg-green-100 font-semibold transition">Donate</a>
+          </li>
+        </ul>
+        <!-- Hamburger -->
+        <button id="hamburger" class="md:hidden flex items-center">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor"><use href="#menu"></use></svg>
+        </button>
+      </nav>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-green-800">
+      <ul class="flex flex-col space-y-2 p-4 font-medium">
+        <li><a href="index.html" class="block hover:text-green-300">Home</a></li>
+        <li><a href="about.html" class="block hover:text-green-300">About Us</a></li>
+        <li>
+          <details>
+            <summary class="cursor-pointer hover:text-green-300">Project</summary>
+            <ul class="pl-4">
+              <li><a href="gallery.html" class="block hover:text-green-300">Gallery</a></li>
+              <li><a href="documents.html" class="block hover:text-green-300">Documents</a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary class="cursor-pointer hover:text-green-300">Programs</summary>
+            <ul class="pl-4">
+              <li><a href="internship.html" class="block hover:text-green-300">Internship</a></li>
+              <li><a href="consultancy.html" class="block hover:text-green-300">Consultancy</a></li>
+              <li><a href="training.html" class="block hover:text-green-300">Training</a></li>
+              <li><a href="seminar.html" class="block hover:text-green-300">Seminar</a></li>
+              <li><a href="supplies.html" class="block hover:text-green-300">Supplies</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="contact.html" class="block hover:text-green-300">Contact Us</a></li>
+        <li>
+          <a href="#" class="block bg-white text-green-700 px-4 py-2 rounded-full shadow hover:bg-green-100 font-semibold">Donate</a>
+        </li>
+      </ul>
+    </div>
+  </header>
 
   <main class="flex-1">
     <section class="container mx-auto py-10 px-4">
